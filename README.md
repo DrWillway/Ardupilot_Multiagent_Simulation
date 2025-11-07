@@ -77,18 +77,6 @@ The xacro is then converted to SDF inside the [multiagent_simulation.launch.py](
 
 ![Simulation with multiple sensors](doc/simulation_with_multiple_sensors.png)
 
-## Fly the drone via position control
-
-The move_drone node allows the user to set the flight mode, arm the drone, takeoff and move using position control.
-
-> Note: After starting the simulation it might take a few seconds until the drone can be armed. If arming was successful "Not ready" should change to "Ready to Fly".
-
-```
-ros2 run multiagent_simulation move_drone
-```
-
-![Drone control GUI](doc/drone_control_gui.png)
-
 ## Feeding in external odometry
 
 The drone can be configured to fuse external odometry by changing the parameters described in [Cartographer SLAM with ROS 2 in SITL](https://ardupilot.org/dev/docs/ros2-cartographer-slam.html#configure-ardupilot). These parameters are already available in [gazebo-iris.parm](src/multiagent_simulation/config/gazebo-iris.parm) so in order to change from GPS navigation to external odometry navigation they only need to be uncommented and the GPS section commented out.
