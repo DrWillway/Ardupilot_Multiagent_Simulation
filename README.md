@@ -26,24 +26,6 @@ Maintainer: [Gilbert Tanner](mailto:gilbert.tanner@aau.at)
     - [Drone model not spawning](#drone-model-not-spawning)
 - [Contact](#contact)
 
-## Prerequisites
-
-- ROS Dev tools: `sudo apt install ros-dev-tools`
-
-## Install Ardupilot environment
-
-- [Install ROS 2](https://ardupilot.org/dev/docs/ros2.html)
-- [ROS 2 with SITL](https://ardupilot.org/dev/docs/ros2-sitl.html)
-- [ROS 2 with SITL in Gazebo](https://ardupilot.org/dev/docs/ros2-gazebo.html)
-
-## Build workspace
-
-```
-source <path-to-ardupilot-workspace>
-rosdep install --from-paths src --ignore-src -r -y
-colcon build --symlink-install
-```
-
 ## Devcontainer
 
 Using a devcontainer or Dockerfile provides a consistent development environment, isolates dependencies, and avoids conflicts with other software on the host machine. This setup ensures that the project runs the same way on any device, improving reproducibility and easing collaboration.
@@ -56,30 +38,18 @@ Using a devcontainer or Dockerfile provides a consistent development environment
 2. Press `F1` and select `Remote-Containers: Open Folder in Container...`.
 3. Choose the folder to open in the container.
 
-#### From the Command Line
+### Or running mannually the Dockerfile
 
-1. Navigate to the project directory.
-2. Run the following command:
-    ```bash
-    code . --folder-uri vscode-remote://dev-container+<container-id>
-    ```
-
-### Running just the Dockerfile
-
-1. Build the Docker image:
+Build the Docker image:
     ```bash
     docker build -t multiagent_simulation .devcontainer
-    ```
-2. Run the Docker container:
-    ```bash
-    docker run -it --rm -v $(pwd):/workspace multiagent_simulation
     ```
 
 ## Run simulation
 
 1. Source workspace
     ```
-    source ./install/setup.{bash|zsh}
+    source ./install/setup.bash
     ```
 2. Launch the simulation
     ```
