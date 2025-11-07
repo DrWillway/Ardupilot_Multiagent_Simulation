@@ -6,9 +6,6 @@ Maintainer: [Gilbert Tanner](mailto:gilbert.tanner@aau.at)
 
 ## Table of Contents
 
-- [Prerequisites](#prerequisites)
-- [Install Ardupilot environment](#install-ardupilot-environment)
-- [Build workspace](#build-workspace)
 - [Devcontainer](#devcontainer)
     - [Starting a Devcontainer](#starting-a-devcontainer)
         - [From VSCode](#from-vscode)
